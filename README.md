@@ -7,7 +7,7 @@ This is a custom collection of `PySide6` widgets, which makes it convenient to m
 - Add as a submodule
 
 ```bash
-git submodule add "https://github.com/leoli0605/PyWidgets.git" <local path>
+git submodule add "https://github.com/leoli0605/PyWidgets.git" "<local path>"
 ```
 
 - Update
@@ -29,7 +29,7 @@ Use [Poetry](https://python-poetry.org/) as the package management tool.
 
 #### Setup
 
-- Windows (Install `Poetry` using `PowerShell` & [Chocolatey](https://chocolatey.org/))
+- Windows (Install `Poetry` using `PowerShell`)
 
 ```bash
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
