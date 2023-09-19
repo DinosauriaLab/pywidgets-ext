@@ -11,7 +11,7 @@ git submodule add "https://github.com/leoli0605/PyWidgets.git" <local path>
 ### Widgets
 
 | Widget                                                           | Description |
-|------------------------------------------------------------------|-------------|
+| ---------------------------------------------------------------- | ----------- |
 | [PyFigureCanvas](./widgets/py_figure_canvas/py_figure_canvas.py) | -           |
 | [PyGraphicsView](./widgets/py_graphics_view/py_graphics_view.py) | -           |
 
@@ -64,6 +64,14 @@ poetry add <package> -G dev
 
 ```bash
 poetry remove <package>
+```
+
+### Contribution
+
+- Update dependencies
+
+```bash
+poetry export -f requirements.txt --output requirements.txt --without-hashes
 ```
 
 ### Testing
