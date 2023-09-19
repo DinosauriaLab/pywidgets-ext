@@ -1,13 +1,13 @@
 # PyWidgets
 
-This is a custom collection of `PySide6` widgets, which makes it convenient to manage and use as submodules during development.
+This is a custom widget of `PySide6` modules, which makes it convenient to manage and use as submodules during development.
 
 ### Usage
 
 - Add as a submodule
 
 ```bash
-git submodule add "https://github.com/leoli0605/PyWidgets.git" "<local path>"
+git submodule add "https://github.com/leoli0605/PyWidgets.git" <local path>
 ```
 
 - Update
@@ -18,10 +18,10 @@ git submodule update --remote
 
 ### Widgets
 
-| Widget                                                           | Description |
-| ---------------------------------------------------------------- | ----------- |
-| [PyFigureCanvas](./widgets/py_figure_canvas/py_figure_canvas.py) | -           |
-| [PyGraphicsView](./widgets/py_graphics_view/py_graphics_view.py) | -           |
+| Widget                                                           | Description | Try It                                                           |
+| ---------------------------------------------------------------- | ----------- | ---------------------------------------------------------------- |
+| [PyFigureCanvas](./widgets/py_figure_canvas/py_figure_canvas.py) | -           | `poetry run python widgets/py_figure_canvas/py_figure_canvas.py` |
+| [PyGraphicsView](./widgets/py_graphics_view/py_graphics_view.py) | -           | `poetry run python widgets/py_graphics_view/py_graphics_view.py` |
 
 ### Development
 
@@ -74,22 +74,16 @@ poetry add <package> -G dev
 poetry remove <package>
 ```
 
-### Contribution
+### Coding Style
+
+```bash
+poetry run black -l 100 .
+```
+
+### Appendix
 
 - Update dependencies
 
 ```bash
 poetry export -f requirements.txt --output requirements.txt --without-hashes
-```
-
-### Testing
-
-```bash
-
-```
-
-### Coding Style
-
-```bash
-poetry run black -l 100 .
 ```
