@@ -4,8 +4,16 @@ This is a custom collection of `PySide6` widgets, which makes it convenient to m
 
 ### Usage
 
-```
+- Add as a submodule
+
+```bash
 git submodule add "https://github.com/leoli0605/PyWidgets.git" <local path>
+```
+
+- Update
+
+```bash
+git submodule update --remote
 ```
 
 ### Widgets
