@@ -5,15 +5,15 @@ This is a custom collection of `PySide6` widgets, which makes it convenient to m
 ### Usage
 
 ```
-git submodule add
+git submodule add "https://github.com/leoli0605/PyWidgets.git" <local path>
 ```
 
 ### Widgets
 
 | Widget                                                           | Description |
-| ---------------------------------------------------------------- | ----------- |
-| [PyFigureCanvas](./widgets/py_figure_canvas/py_figure_canvas.py) | TBD         |
-| [PyGraphicsView](./widgets/py_graphics_view/py_graphics_view.py) | TBD         |
+|------------------------------------------------------------------|-------------|
+| [PyFigureCanvas](./widgets/py_figure_canvas/py_figure_canvas.py) | -           |
+| [PyGraphicsView](./widgets/py_graphics_view/py_graphics_view.py) | -           |
 
 ### Development
 
