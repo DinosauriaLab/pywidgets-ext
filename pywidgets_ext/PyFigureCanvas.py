@@ -148,7 +148,7 @@ def main():
     main_window.resize(600, 600)
     main_window.show()
 
-    app.exec_()
+    app.exec()
 
 
 if __name__ == "__main__":
