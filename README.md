@@ -4,6 +4,14 @@ This is a custom widget of `PySide6` modules, which makes it convenient to manag
 
 ### Usage
 
+- By PyPI
+
+```bash
+pip install pywidgets-ext
+```
+
+`from pywidgets_ext import *`
+
 - Add as a submodule
 
 ```bash
