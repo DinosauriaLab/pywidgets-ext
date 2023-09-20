@@ -127,29 +127,38 @@ class PyFigureCanvas(FigureCanvas):
             # self.graphicsView.scene().addItem(self.current_border)
 
 
-def main():
-    app = QApplication([])
+# This file can be run directly from Python to test the widget.
+# ///////////////////////////////////////////////////////////////
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super(MainWindow, self).__init__()
 
-    # 創建一個簡單的圖形
-    fig, ax = plt.subplots(figsize=(5, 5))
-    ax.plot([0, 1, 2, 3, 4], [0, 1, 4, 9, 16], label="y = x^2")
-    ax.set_title("Sample Plot")
-    ax.set_xlabel("x")
-    ax.set_ylabel("y")
-    ax.legend()
+        # Create a simple figure
+        fig, ax = self.create_sample_plot()
 
-    # 使用 PyFigureCanvas 類別來顯示圖形
-    canvas = PyFigureCanvas(fig)
+        # Use PyFigureCanvas class to display the figure
+        self.canvas = PyFigureCanvas(fig)
 
-    # 創建一個主視窗來容納 canvas
-    main_window = QMainWindow()
-    main_window.setCentralWidget(canvas)
-    main_window.setWindowTitle("PyFigureCanvas Demo")
-    main_window.resize(600, 600)
-    main_window.show()
+        # Set up the main window
+        self.setup_main_window()
 
-    app.exec()
+    def create_sample_plot(self):
+        fig, ax = plt.subplots(figsize=(5, 5))
+        ax.plot([0, 1, 2, 3, 4], [0, 1, 4, 9, 16], label="y = x^2")
+        ax.set_title("Sample Plot")
+        ax.set_xlabel("x")
+        ax.set_ylabel("y")
+        ax.legend()
+        return fig, ax
+
+    def setup_main_window(self):
+        self.setCentralWidget(self.canvas)
+        self.setWindowTitle("PyFigureCanvas Demo")
+        self.resize(600, 600)
 
 
 if __name__ == "__main__":
-    main()
+    app = QApplication([])
+    window = MainWindow()
+    window.show()
+    app.exec()
