@@ -17,7 +17,7 @@ DESCRIPTION = "This is a custom widget of `PySide6` modules, which makes it conv
 URL = "https://github.com/leoli0605/pywidgets-ext"
 EMAIL = "jafee201153@gmail.com"
 AUTHOR = "Leo"
-REQUIRES_PYTHON = ">=3.10.0"
+REQUIRES_PYTHON = ">=3.9.0"
 VERSION = "0.1.1"
 
 # What packages are required for this module to be executed?
