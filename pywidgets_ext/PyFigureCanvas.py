@@ -1,13 +1,14 @@
 import matplotlib
+from PySide6.QtCore import *
+from PySide6.QtGui import *
+from PySide6.QtSvgWidgets import *
+from PySide6.QtWidgets import *
 
 matplotlib.use("Qt5Agg")
 from copy import deepcopy
 
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from PySide6.QtCore import QTimer
-
-from qt_core import *
 
 
 class PyFigureCanvas(FigureCanvas):
@@ -124,3 +125,31 @@ class PyFigureCanvas(FigureCanvas):
             # self.current_border = QGraphicsRectItem(self.graphicsView.sceneRect())
             # self.current_border.setPen(QPen(QColor(255, 0, 0), 1))
             # self.graphicsView.scene().addItem(self.current_border)
+
+
+def main():
+    app = QApplication([])
+
+    # 創建一個簡單的圖形
+    fig, ax = plt.subplots(figsize=(5, 5))
+    ax.plot([0, 1, 2, 3, 4], [0, 1, 4, 9, 16], label="y = x^2")
+    ax.set_title("Sample Plot")
+    ax.set_xlabel("x")
+    ax.set_ylabel("y")
+    ax.legend()
+
+    # 使用 PyFigureCanvas 類別來顯示圖形
+    canvas = PyFigureCanvas(fig)
+
+    # 創建一個主視窗來容納 canvas
+    main_window = QMainWindow()
+    main_window.setCentralWidget(canvas)
+    main_window.setWindowTitle("PyFigureCanvas Demo")
+    main_window.resize(600, 600)
+    main_window.show()
+
+    app.exec_()
+
+
+if __name__ == "__main__":
+    main()
