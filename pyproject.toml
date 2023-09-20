@@ -1,12 +1,15 @@
 [tool.poetry]
-name = "pywidgets"
-version = "0.1.0"
+name = "pywidgets-ext"
+version = "0.1.4"
 description = ""
+license = "MIT"
 authors = ["Leo <jafee201153@gmail.com>"]
 readme = "README.md"
+homepage = "https://pypi.org/project/pywidgets-ext/"
+repository = "https://github.com/leoli0605/pywidgets-ext"
 
 [tool.poetry.dependencies]
-python = ">=3.10,<3.12"
+python = ">=3.9,<3.12"
 pyside6 = "^6.5.2"
 matplotlib = "^3.8.0"
 

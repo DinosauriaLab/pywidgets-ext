@@ -87,3 +87,7 @@ poetry run black -l 100 .
 ```bash
 poetry export -f requirements.txt --output requirements.txt --without-hashes
 ```
+
+```bash
+poetry publish --build -u __token__ -p <token>
+```

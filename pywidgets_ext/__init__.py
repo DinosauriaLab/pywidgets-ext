@@ -1,7 +1,7 @@
 # PY FIGURE CANVAS
 # ///////////////////////////////////////////////////////////////
-import PyFigureCanvas
+from .PyFigureCanvas import PyFigureCanvas
 
 # PY GRAPHICS VIEW
 # ///////////////////////////////////////////////////////////////
-import PyGraphicsView
+from .PyGraphicsView import PyGraphicsView
