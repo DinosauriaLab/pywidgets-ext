@@ -1,101 +1,81 @@
-# PyWidgets
+# Contributing to pywidgets-ext
 
-This is a custom widget of `PySide6` modules, which makes it convenient to manage and use as submodules during development.
+Thank you for your interest in contributing to `pywidgets-ext`! Here’s how you can contribute to the project.
 
-### Usage
+## Setup Your Development Environment
 
-- By PyPI
-
-```bash
-pip install pywidgets-ext
-```
-
-`from pywidgets_ext import *`
-
-- Add as a submodule
+### 1. Clone the Repository
 
 ```bash
-git submodule add "https://github.com/leoli0605/PyWidgets.git" <local path>
+git clone https://github.com/leoli0605/pywidgets-ext.git
+cd pywidgets-ext
 ```
 
-- Update
+### 2. Set Up Poetry
 
-```bash
-git submodule update --remote
-```
+Use [Poetry](https://python-poetry.org/) as the package management tool. Follow the installation and setup guide as provided in the README.
 
-### Widgets
-
-| Widget                                                           | Description | Try It                                                           |
-| ---------------------------------------------------------------- | ----------- | ---------------------------------------------------------------- |
-| [PyFigureCanvas](./widgets/py_figure_canvas/py_figure_canvas.py) | -           | `poetry run python widgets/py_figure_canvas/py_figure_canvas.py` |
-| [PyGraphicsView](./widgets/py_graphics_view/py_graphics_view.py) | -           | `poetry run python widgets/py_graphics_view/py_graphics_view.py` |
-
-### Development
-
-Use [Poetry](https://python-poetry.org/) as the package management tool.
-
-#### Setup
-
-- Windows (Install `Poetry` using `PowerShell`)
+#### Windows
 
 ```bash
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
 $Env:Path += ";$HOME\AppData\Roaming\Python\Scripts"; setx PATH "$Env:Path"
 ```
 
-- MacOS (Install `Poetry` using [Homebrew](https://brew.sh/))
+#### MacOS
 
 ```bash
 brew install poetry
 ```
 
-#### Environment
-
-```bash
-poetry config virtualenvs.in-project true
-```
-
-#### Install
-
-- Install dependencies
+### 3. Install Dependencies
 
 ```bash
 poetry install
 ```
 
-- Install a package
+## Coding Style
 
-```bash
-poetry add <package>
-```
-
-- Install a package as a development dependency
-
-```bash
-poetry add <package> -G dev
-```
-
-- Remove a package
-
-```bash
-poetry remove <package>
-```
-
-### Coding Style
+Please follow the coding style used in the project.
 
 ```bash
 poetry run black -l 100 .
 ```
 
-### Appendix
+## Submitting Changes
 
-- Update dependencies
-
-```bash
-poetry export -f requirements.txt --output requirements.txt --without-hashes
-```
+1. **Create a Branch:** Once your development environment is set up, create a new branch for your work.
 
 ```bash
-poetry publish --build -u __token__ -p <token>
+git checkout -b <branch-name>
 ```
+
+2. **Make Changes:** Make your changes and commit them with a descriptive message.
+
+```bash
+git commit -m "Description of changes made"
+```
+
+3. **Push Changes:** Push your changes to your fork.
+
+```bash
+git push origin <branch-name>
+```
+
+4. **Create a Pull Request:** Go to the original repository and create a pull request. Describe your changes in detail and how they enhance the project.
+
+### Note: Please ensure that your code passes all the tests before submitting a pull request.
+
+## Providing Examples
+
+It's crucial to include example content (`if __name__ == "__main__":`) in each widget. This allows users to directly execute `python -m pywidgets_ext.<widget>` to understand the purpose of each widget and how to use it effectively. By providing clear and concise examples, you contribute to a smoother user experience and encourage the adoption of the widgets.
+
+Thank you for enhancing `pywidgets-ext` with valuable examples!
+
+## Reporting Bugs
+
+If you find a bug, please open an issue in the GitHub repository describing the bug and where you found it.
+
+- Please make sure to read our [Code of Conduct](CODE_OF_CONDUCT.md) and adhere to it in all interactions within the project.
+
+Thank you for your contribution to pywidgets-ext!
