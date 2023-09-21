@@ -70,7 +70,21 @@ git push origin <branch-name>
 
 It's crucial to include example content (`if __name__ == "__main__":`) in each widget. This allows users to directly execute `python -m pywidgets_ext.<widget>` to understand the purpose of each widget and how to use it effectively. By providing clear and concise examples, you contribute to a smoother user experience and encourage the adoption of the widgets.
 
-Thank you for enhancing `pywidgets-ext` with valuable examples!
+## Publishing a New Version
+
+Once you have made your contributions and your changes have been merged into the main branch, you may need to publish a new version of the package. Here’s how you can do it.
+
+### 1. Build and Publish
+
+Use the following command to build and publish a new version. Replace `<TOKEN_API>` with your actual API token.
+
+```bash
+poetry publish --build -u __token__ -p <TOKEN_API>
+```
+
+### 2. Verify
+
+After running the above command, please verify that the new version is available on [PyPI](https://pypi.org/project/pywidgets-ext/).
 
 ## Reporting Bugs
 
@@ -78,4 +92,4 @@ If you find a bug, please open an issue in the GitHub repository describing the 
 
 - Please make sure to read our [Code of Conduct](CODE_OF_CONDUCT.md) and adhere to it in all interactions within the project.
 
-Thank you for your contribution to pywidgets-ext!
+Thank you for your contribution to `pywidgets-ext`!
